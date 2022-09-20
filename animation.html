@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation</title>
+    <style>
+      .box {
+        width: 700px;
+        height: 300px;
+        background-color: lightskyblue;
+      }
+      .ball {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        position: relative;
+        animation: jumping 5s ease-in-out infinite alternate;
+        /* animation-play-state: running; */
+      }
+      @keyframes jumping {
+        0% {
+          background-color: orange;
+          left: 0;
+          top: 0;
+          transform: scale(1);
+        }
+        25% {
+          background-color: tomato;
+          top: 225px;
+          transform: scale(0.5);
+        }
+        50% {
+          background-color: orange;
+          top: 0;
+          transform: scale(1);
+        }
+        75% {
+          background-color: tomato;
+          top: 225px;
+          transform: scale(0.5);
+        }
+        100% {
+          background-color: orange;
+          left: 600px;
+          top: 0;
+          transform: scale(1);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Let's Explore Animation</h1>
+    <div class="box">
+      <div class="ball"></div>
+    </div>
+  </body>
+</html>
